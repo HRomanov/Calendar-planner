@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Calendar</title>
+  <link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="popup.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/css/bootstrap.min.css" integrity="2hfp1SzUoho7/TsGGGDaFdsuuDL0LX2hnUp6VkX3CUQ2K4K+xjboZdsXyp4oUHZj" crossorigin="anonymous">
+
+</head>
+<body>
+	<header>
+    <div class="container">
+      <div class="clearfix">
+        <div class="header_nav">
+          <button id="add" type="button" class="btn btn-primary btn-sm">Добавить</button>
+          <button type="button" class="btn btn-primary btn-sm">Обновить</button>
+          <input class="search" type="text" name="">
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="clearfix">
+      <div class="calendar_nav">
+        <button id="previous_m" class="btn btn-secondary btn-sm"><</button>
+        <p id="month_name">lol</p>
+        <button id="next_m" class="btn btn-secondary btn-sm">></button>
+        <button id ="today" class="btn btn-secondary btn-sm">Сегодня</button>
+      </div>
+
+       <table id="calendar"  onclick="get_td()">
+        <tbody>
+      </table> 
+
+
+  <div onclick="close_pp()" id="wrap"></div>
+    <div id="window">
+      <img class="close" onclick="close_pp()" src="close_icon.png">
+     <form id="event_form" novalidate>
+      <input id="input_event" placeholder="Событие" type="text" required />
+      <input id="input_date" placeholder="День, месяц, год" type="text" required />
+      <input id="input_names" placeholder="Имя участников" type="text" required />
+      <textarea id="input_description" placeholder="Описание"></textarea>
+      <input id="submit_click" type="submit"  value="Готово" />
+      <input type="reset"  value="Удалить"/>
+    </form>
+  </div>
+
+  <script src="create_calendar.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>
